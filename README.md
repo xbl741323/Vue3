@@ -22,4 +22,21 @@
 + Vue3可以更好的支持TypeScript
 
 ### 4.新的特性
+1.Composition API(组合API)
++ setup配置
++ ref与reactive
++ watch与watchEffect
++ provide与inject
+  ......
+  
+2.新的内置组件
++ Fragment
++ Teleport
++ Suspense
+
+3.其它改变
++ 新的生命周期钩子
++ data选项应始终被声明为一个函数
++ 移除keyCode支持作为v-on的修饰符
+  ......
 
