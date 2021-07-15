@@ -39,4 +39,10 @@
 + data选项应始终被声明为一个函数
 + 移除keyCode支持作为v-on的修饰符
   ......
+  
+## 常用Composition API
+
+### 1.拉开序幕的setup
+
+### 2.ref函数
 
