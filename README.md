@@ -119,3 +119,25 @@ Object.defineProperty(data,'count',{
      + attrs：值为对象，包含：组件外部传递过来，但没有在props配置中声明的属性，相当于`this.$attrs`
      + slots：收到的插槽内容，相当于`this.$slots`
      + emit：分发自定义事件的函数，相当于`this.$emit`
+
+### 8.计算属性与僵监视
+1. computed函数
++ 与Vue2.x中computed配置功能一致
++ 写法：
+```
+<script>
+import { computed } from "vue";
+export default {
+  props: ["title"],
+  setup(props) {
+    let showTitle = computed(() => { // 计算属性vue3.0中的用法
+      return "o" + props.title + "o";
+    });
+    return { showTitle };
+  },
+};
+</script>
+```
+
+2.watch函数
++ 与Vue2.x中watch配置功能一致
