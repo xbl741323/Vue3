@@ -120,7 +120,7 @@ Object.defineProperty(data,'count',{
      + slots：收到的插槽内容，相当于`this.$slots`
      + emit：分发自定义事件的函数，相当于`this.$emit`
 
-### 8.计算属性与僵监视
+### 8.计算属性与监视
 1. computed函数
 + 与Vue2.x中computed配置功能一致
 + 写法：
