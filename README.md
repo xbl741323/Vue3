@@ -183,7 +183,9 @@ export default {
     watch(person,(newVlue,oldValue)=>{ 
       console.log(oldValue,"输出oldValue")
       console.log(newVlue,"输出newVlue")
-    },{immediate:true})
+    },
+    { immediate: true }
+   );
     
     // 情况4：监视reactive所定义的一个响应式对象数据中的某个属性
     watch(
@@ -192,12 +194,23 @@ export default {
         console.log(oldValue, "输出oldValue");
         console.log(newVlue, "输出newVlue");
       },
-      { immediate: true, deep: true }
+      { immediate: true }
+    );
+    
+    // 情况5：监视reactive所定义的一个响应式对象数据中的某些属性
+    watch(
+      [() => person.age, () => person.name],
+      (newVlue, oldValue) => {
+        console.log(oldValue, "输出oldValue");
+        console.log(newVlue, "输出newVlue");
+      },
+      { immediate: true }
     );
     
     function changeNum(){
        num.value += 1
     }
+   
     return {
       num,
       msg,
