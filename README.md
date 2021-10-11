@@ -154,8 +154,8 @@ export default {
 2.watch函数
 + 与Vue2.x中watch配置功能一致
 + 两个小坑：
-   1.监视reactive定义的响应式数据时：oldValue无法正确获取，强制开启了深度监视（deep配置失效）。
-   2.监视reactive定义的响应式数据中的某个对象属性时：deep配置有效。
+   1. 监视reactive定义的响应式数据时：oldValue无法正确获取，强制开启了深度监视（deep配置失效）。
+   2. 监视reactive定义的响应式数据中的某个对象属性时：deep配置有效。
 + 写法：
 ```
 <script>
