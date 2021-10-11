@@ -153,7 +153,6 @@ export default {
       name:"神里",
       age:18
     })
-    
     // 情况1：监视ref所定义的一个响应式数据
     watch(num,(newVlue,oldValue)=>{ 
       console.log(oldValue,"输出oldValue")
@@ -173,7 +172,6 @@ export default {
     function changeNum(){
        num.value += 1
     }
-    
     return {
       num,
       msg,
