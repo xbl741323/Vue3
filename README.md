@@ -176,7 +176,7 @@ export default {
       console.log(newVlue,"输出newVlue")
     },{immediate:true})
     /*
-      情况3：监视reactive所定义的一个响应式对象数据
+      情况3：监视reactive所定义的一个响应式对象数据的全部属性
       注意1：此处无法正确获取oldValue
       注意2：强制开启了深度监听（目前关不掉）
     */
