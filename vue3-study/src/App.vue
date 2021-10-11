@@ -1,13 +1,28 @@
 <template>
-  <HelloWorld />
+  <top :title="title" />
+  <router-view />
+  <tab-bar @change-title='changeTitle' />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import { ref } from "vue";
+import tabBar from "./components/common/tabBar";
+import top from "./components/common/top";
 export default {
   components: {
-    HelloWorld,
+    tabBar,
+    top,
   },
+  setup(){
+    let title = ref('首页');
+    function changeTitle(val){
+        title.value = val
+    }
+    return{
+      changeTitle,
+      title
+    }
+  }
 };
 </script>
 
@@ -18,6 +33,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 45px;
 }
 </style>
