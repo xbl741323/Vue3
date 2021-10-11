@@ -175,11 +175,15 @@ export default {
       console.log(oldValue,"输出oldValue")
       console.log(newVlue,"输出newVlue")
     },{immediate:true})
-    // 情况3：监视reactive所定义的对象数据，deep：true 深度监听对象属性，注意：此处无法正确获取oldValue
+    /*
+      情况3：监视reactive所定义的一个响应式对象数据
+      注意1：此处无法正确获取oldValue
+      注意2：强制开启了深度监听（目前关不掉）
+    */
     watch(person,(newVlue,oldValue)=>{ 
       console.log(oldValue,"输出oldValue")
       console.log(newVlue,"输出newVlue")
-    },{immediate:true,deep:true})
+    },{immediate:true})
     
     function changeNum(){
        num.value += 1
