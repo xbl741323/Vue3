@@ -185,6 +185,16 @@ export default {
       console.log(newVlue,"输出newVlue")
     },{immediate:true})
     
+    // 情况4：监视reactive所定义的一个响应式对象数据中的某个属性
+    watch(
+      () => person.age,
+      (newVlue, oldValue) => {
+        console.log(oldValue, "输出oldValue");
+        console.log(newVlue, "输出newVlue");
+      },
+      { immediate: true, deep: true }
+    );
+    
     function changeNum(){
        num.value += 1
     }
