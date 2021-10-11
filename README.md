@@ -165,16 +165,19 @@ export default {
       name:"神里",
       age:18
     })
+    
     // 情况1：监视ref所定义的一个响应式数据
     watch(num,(newVlue,oldValue)=>{ 
       console.log(oldValue,"输出oldValue")
       console.log(newVlue,"输出newVlue")
     })
+    
     // 情况2：监视ref所定义的多个响应式数据，immediate：true 初始化加载时执行监听
     watch([num,msg],(newVlue,oldValue)=>{ 
       console.log(oldValue,"输出oldValue")
       console.log(newVlue,"输出newVlue")
     },{immediate:true})
+    
     /*
       情况3：监视reactive所定义的一个响应式对象数据的全部属性
       注意1：此处无法正确获取oldValue
