@@ -141,3 +141,46 @@ export default {
 
 2.watch函数
 + 与Vue2.x中watch配置功能一致
++ 写法：
+```
+<script>
+import { ref,reactive,watch } from 'vue'
+export default {
+  setup() {
+    let num = ref(0)
+    let msg = ref('hello')
+    let person = reactive({
+      name:"神里",
+      age:18
+    })
+    
+    // 情况1：监视ref所定义的一个响应式数据
+    watch(num,(newVlue,oldValue)=>{ 
+      console.log(oldValue,"输出oldValue")
+      console.log(newVlue,"输出newVlue")
+    })
+    // 情况2：监视ref所定义的多个响应式数据，immediate：true 初始化加载时执行监听
+    watch([num,msg],(newVlue,oldValue)=>{ 
+      console.log(oldValue,"输出oldValue")
+      console.log(newVlue,"输出newVlue")
+    },{immediate:true})
+    // 情况3：监视reactive所定义的对象数据，deep：true 深度监听对象属性，注意：此处无法正确获取oldValue
+    watch(person,(newVlue,oldValue)=>{ 
+      console.log(oldValue,"输出oldValue")
+      console.log(newVlue,"输出newVlue")
+    },{immediate:true,deep:true})
+    
+    function changeNum(){
+       num.value += 1
+    }
+    
+    return {
+      num,
+      msg,
+      person,
+      changeNum
+    };
+  },
+};
+</script>
+```
