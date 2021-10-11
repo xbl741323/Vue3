@@ -163,7 +163,10 @@ export default {
     let msg = ref('hello')
     let person = reactive({
       name:"神里",
-      age:18
+      age:18，
+      job:{
+        salary:2000
+      }
     })
     
     // 情况1：监视ref所定义的一个响应式数据
@@ -209,6 +212,17 @@ export default {
       },
       { immediate: true }
     );
+    
+    // 特殊情况：监视reactive所定义的一个响应式对象数据中的对象属性（此处deep: true需要添加，负责无响应）
+    watch(
+      () => person.job,
+      (newVlue, oldValue) => {
+        console.log(oldValue, "输出oldValue");
+        console.log(newVlue, "输出newVlue");
+      },
+      { immediate: true, deep: true }
+    );
+
     
     function changeNum(){
        num.value += 1
