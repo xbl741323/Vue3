@@ -283,7 +283,7 @@ watchEffect(() => {
 + 类似于Vue2.x中的mixin
 + 自定义hook的优势：复用代码，让setup中的逻辑更清楚易懂
 
-### 11.toRef
+### 11.toRef与toRefs
 + 作用：创建一个ref对象，其value值指向另一个对象中的某个属性值
 + 语法：`const name = toRef(person,'name')`
 + 应用：要将响应式对象中的某个属性单独提供给外部使用时
