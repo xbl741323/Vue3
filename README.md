@@ -213,7 +213,7 @@ export default {
       { immediate: true }
     );
     
-    // 特殊情况：监视reactive所定义的一个响应式对象数据中的对象属性（此处deep: true需要添加，负责无响应）
+    // 特殊情况：监视reactive所定义的一个响应式对象数据中的对象属性（注意：此处deep: true需要添加，负责无响应）
     watch(
       () => person.job,
       (newVlue, oldValue) => {
