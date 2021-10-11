@@ -241,3 +241,5 @@ export default {
 };
 </script>
 ```
+
+3.watchEffect函数
