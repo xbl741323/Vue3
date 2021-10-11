@@ -130,9 +130,21 @@ import { computed } from "vue";
 export default {
   props: ["title"],
   setup(props) {
-    let showTitle = computed(() => { // 计算属性vue3.0中的用法
+    // vue3.0中的计算属性用法-简写（没有考虑计算属性被修改的情况）
+    let showTitle = computed(() => { 
       return "o" + props.title + "o";
     });
+    
+    // vue3.0中的计算属性用法-完整写法
+    let showName = computed({
+      get() {
+        return name.value;
+      },
+      set(value) {
+        name.value = value;
+      },
+    });
+    
     return { showTitle };
   },
 };
