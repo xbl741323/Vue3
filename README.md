@@ -258,3 +258,5 @@ watchEffect(() => {
 ```
 
 ### 9.生命周期
+![image](https://user-images.githubusercontent.com/49593119/136749133-ec5d4f7c-15aa-4bf8-bc42-bd8dbbfaadba.png)
+
