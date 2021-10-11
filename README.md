@@ -258,10 +258,10 @@ watchEffect(() => {
 ```
 
 ### 9.生命周期
-Vue2生命周期图：
+#### Vue2生命周期图：
 ![image](https://user-images.githubusercontent.com/49593119/136749133-ec5d4f7c-15aa-4bf8-bc42-bd8dbbfaadba.png)
 
-Vue3生命周期图：
+#### Vue3生命周期图：
 ![image](https://user-images.githubusercontent.com/49593119/136749592-9f833ff8-faa0-4f52-8e01-e257481d9096.png)
 
 
