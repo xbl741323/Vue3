@@ -265,8 +265,8 @@ watchEffect(() => {
 ![image](https://user-images.githubusercontent.com/49593119/136749592-9f833ff8-faa0-4f52-8e01-e257481d9096.png)
 
 + Vue3.0中可以继续使用Vue2.x中的生命周期钩子，但有两个被更名：
-1. beforeDestroy改名为beforeUnmount
-2. destroyed改名为unmounted
+1. beforeDestroy 改名为 beforeUnmount
+2. destroyed 改名为 unmounted
 
 + Vue3.0中也提供了Composition API形式的生命周期钩子，与Vue2.x中钩子对应关系如下：
 1. beforeCreate ==> setup()
