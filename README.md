@@ -314,4 +314,43 @@ watchEffect(() => {
     (2)：当渲染具有不可变数据源的大列表时，跳过响应式转换可以提高性能
 
     ```
+### 4.customRef
++ 作用：创建一个自定义的ref，并对其依赖项跟踪和更新触发进行显式控制
++ 实现防抖效果：
+ ```
+ <template>
+  <div class="home_index">
+    <input type="text" v-model="msg" />
+    <div>{{ msg }}</div>
+  </div>
+</template>
 
+<script>
+import { customRef } from "vue";
+export default {
+  setup() {
+    let msg = myRef("hello", 500);
+    function myRef(value, delay) {
+      let timer;
+      return customRef((track, trigger) => {
+        return {
+          get() {
+            track();
+            return value;
+          },
+          set(newValue) {
+            value = newValue;
+            clearTimeout(timer); // 防抖
+            timer = setTimeout(() => {
+              trigger();
+            }, delay);
+          },
+        };
+      });
+    }
+    return {
+      msg,
+    };
+  },
+};
+ ```
