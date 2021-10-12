@@ -299,7 +299,7 @@ watchEffect(() => {
   
 ### 2.readonly与shallowReadonly
 + readonly：让一个响应式数据变为只读的（深只读）
-+ shallowReadonly：让一个响应式数据变为只读的（浅只读）
++ shallowReadonly：让一个响应式数据变为只读的（浅只读，reactive创建的对象数据第一层不能改）
 + 应用场景：不希望数据被修改时
 
 
