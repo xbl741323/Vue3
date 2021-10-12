@@ -377,14 +377,14 @@ export default {
 ### 2.Teleport
 + 什么是Teleport？=>Teleport是一种能够将我们的组件html结构移动到指定位置的技术
 ```
- <template>
+ <teleport>
    <div v-if="isShow" class="mask">
      <div class="dialog">
        <h3>我是一个弹框</h3>
        <button @click="isShow = false">关闭弹窗</button>
      </div>
    <div>
- <template>
+ <teleport>
 ```
 
 ### 3.Suspense
