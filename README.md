@@ -363,5 +363,9 @@ export default {
 
 ## 四、Composition API的优势
 + 1.Options API存在的问题：使用传统OptionsAPI中，新增或者修改一个需求，就需要分别在data,methods,computed里修改
+![image](https://user-images.githubusercontent.com/49593119/136882102-bff12326-6463-4e61-9e15-155767acc945.png)
+
 + 2.Composition API的优势：我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起
+![image](https://user-images.githubusercontent.com/49593119/136882226-4ce1d4c6-e6d8-4c0e-8fee-cbbaca92c2af.png)
+
 
