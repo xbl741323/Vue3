@@ -5,7 +5,7 @@
 + 耗时2年多、2600+次提交、30+个RFC、600+次PR、99位贡献者
 + github的tag地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0
 
-## Vue3带来了什么？
+## 一、Vue3带来了什么？
 
 ### 1.性能的提升
 + 打包大小减少41%
@@ -40,7 +40,7 @@
 + 移除keyCode支持作为v-on的修饰符
   ......
   
-## 常用Composition API
+## 二、常用Composition API
 
 ### 1.拉开序幕的setup
 
@@ -289,7 +289,7 @@ watchEffect(() => {
 + 应用：要将响应式对象中的某个属性单独提供给外部使用时
 + 扩展：toRefs与toRef功能一致，但可以批量创建多个ref对象，语法:toRefs(person)
 
-## 其它Composition API
+## 三、其它Composition API
 ### 1.shallowReactive与shallowRef
 + shallowReactive：只处理对象最外层属性的响应式（浅响应式）
 + shallowRef：只处理基本数据类型的响应式，不进行对象的响应式处理
@@ -354,3 +354,11 @@ export default {
   },
 };
  ```
+ 
+### 5.响应式数据的判断
++ isRef：检查一个值是为一个ref对象
++ isReactive：检查一个对象是否是由reactive创建的响应式代理
++ isReadonly：检查一个对象是否是由readonly创建的只读代理
++ isProxy：检查一个对象是否是由reactive或者readonly方法创建的代理
+
+## 四、Composition API的优势
