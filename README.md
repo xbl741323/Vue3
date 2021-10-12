@@ -374,6 +374,19 @@ export default {
 + 在Vue3中：组件可以没有根标签，内部会将多个标签包含在一个Fragment虚拟元素中
 + 好处：减少标签层级，减小内存占用
 
+### 2.Teleport
++ 什么是Teleport？=>Teleport是一种能够将我们的组件html结构移动到指定位置的技术
+```
+ <template>
+   <div v-if="isShow" class="mask">
+     <div class="dialog">
+       <h3>我是一个弹框</h3>
+       <button @click="isShow = false">关闭弹窗</button>
+     </div>
+   <div>
+ <template>
+```
+
 ### 3.Suspense
 + 等待异步组件时渲染一些额外的内容，让应用有更好的用户体验
 + 使用步骤：
