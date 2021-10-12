@@ -366,6 +366,7 @@ export default {
 ![image](https://user-images.githubusercontent.com/49593119/136882102-bff12326-6463-4e61-9e15-155767acc945.png)
 
 + 2.Composition API的优势：我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起
-![image](https://user-images.githubusercontent.com/49593119/136882226-4ce1d4c6-e6d8-4c0e-8fee-cbbaca92c2af.png)
+![image](https://user-images.githubusercontent.com/49593119/136882432-80f615f8-711f-4a6e-8136-c68cae1af1e6.png)
+
 
 
