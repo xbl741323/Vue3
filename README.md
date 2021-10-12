@@ -57,7 +57,7 @@
   (2).但在setup中不能访问到Vue2.x配置(data、methods、computed...)
   (3).如果有重名，setup优先
   ```
-  2. setup不能是一个async函数，因为返回值不再是return的对象，而是promise，模板看不到return对象中的属性
+  2. setup不能是一个async函数，因为返回值不再是return的对象，而是promise，模板看不到return对象中的属性(后期也可以返回一个Promise实例，但需要Suspense和异步组件的配合)
  
 ### 2.ref函数
 
@@ -373,4 +373,29 @@ export default {
 + 在Vue2中：组件必须有一个根标签
 + 在Vue3中：组件可以没有根标签，内部会将多个标签包含在一个Fragment虚拟元素中
 + 好处：减少标签层级，减小内存占用
+
+### 3.Suspense
++ 等待异步组件时渲染一些额外的内容，让应用有更好的用户体验
++ 使用步骤：
+```
+// 1.异步引入组件
+import { defineAsyncComponent } from 'vue'
+const Child = defineAsyncComponent(()=>import('./component/Child.vue'))
+```
+```
+// 2.使用Supense包裹组件，并配置好default与fallback
+<template>
+  <div>
+    <h3>我是App组件</h3>
+    <Suspense>
+      <template v-slot:default>
+         <Child />
+      </template>
+      <template v-slot:fallback>
+         <h3>加载中.....</h3>
+      </template>
+    </Supense>
+  <div>
+</template>
+```
 
