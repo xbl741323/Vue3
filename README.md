@@ -340,7 +340,7 @@ export default {
           },
           set(newValue) {
             value = newValue;
-            clearTimeout(timer); // 防抖
+            clearTimeout(timer); // 清除已有定时器
             timer = setTimeout(() => {
               trigger();
             }, delay);
